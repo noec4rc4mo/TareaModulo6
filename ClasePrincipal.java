@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.tareamodulo4;
+package com.mycompany.tareamodulo5;
 
-import helpers.Futbolista;
+import Helpers.Circulo;
+import Helpers.Cuadrado;
+import Helpers.Linea;
+import Helpers.Triangulo;
 
 /**
  *
- * @author noec
+ * @author rm97h
  */
 public class ClasePrincipal {
 
@@ -17,21 +20,21 @@ public class ClasePrincipal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
+        Circulo circulo = new Circulo();
+        Linea linea = new Linea();
+        Triangulo triangulo = new Triangulo();
+        Cuadrado cuadrado = new Cuadrado();
         
-        //Instanciar la clase futbolista
-        Futbolista futbolista = new Futbolista();
+        System.out.println(circulo.obtenerInfo());
+        circulo.imprimirDatos();
+        System.out.println(linea.obtenerInfo());
+        linea.imprimirDatos();
+        System.out.println(triangulo.obtenerInfo());
+        triangulo.imprimirDatos();
+        System.out.println(cuadrado.obtenerInfo());
+        cuadrado.imprimirDatos();
         
-        System.out.println("Parte 1: Encapsulamiento");
         
-        futbolista.establecerEdad(31);
-        System.out.println("La edad es: " + futbolista.obtenerEdad());
-        
-        futbolista.establecerNombre("Aaron Ramsey");
-        System.out.println("Su nombre es: " + futbolista.obtenerNombre());
-        
-        futbolista.establecerEquipoact("Juventus FC");
-        System.out.println("Su equipo actual es: " + futbolista.obtenerEquipoact());
-        
-    }
-    
+    } 
 }
